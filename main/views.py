@@ -27,7 +27,6 @@ def show_main(request):
         'last_login': request.COOKIES['last_login'],
     }
 
-
     return render(request, "main.html", context)
 
 def create_mood_entry(request):
