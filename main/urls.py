@@ -5,6 +5,8 @@ from . import views
 from main.views import register
 from main.views import login_user
 from main.views import logout_user
+from main.views import edit_mood
+from main.views import delete_mood
 app_name = 'main'
 
 urlpatterns = [
@@ -17,5 +19,7 @@ urlpatterns = [
     path ('register/', register, name='register'),
     path ('login/', login_user, name='login'),
     path ('logout/', logout_user, name='logout'),
+    path ('edit_mood/<uuid:id>/', edit_mood, name='edit_mood'),
+    path ('delete_mood/<uuid:id>/', delete_mood, name='delete_mood'),
     
 ]
